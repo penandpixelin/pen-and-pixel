@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Pen and Pixel | Digital Agency</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b4bee",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101322",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .form-input:focus {
+            border-color: #2b4bee;
+            ring-color: #2b4bee;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-primary/20 px-6 py-4 md:px-10 lg:px-20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-8">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight">Pen and Pixel</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<nav class="flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Work</a>
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+<a class="text-primary text-sm font-bold underline underline-offset-4" href="#">Contact</a>
+</nav>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold tracking-wide hover:opacity-90 transition-opacity">
+                    Start a Project
+                </button>
+</div>
+</header>
+<main class="flex-1">
+<!-- Hero Section -->
+<section class="px-6 py-12 md:px-10 lg:px-20 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 gap-12 items-start lg:grid-cols-5">
+<!-- Form Side -->
+<div class="bg-white dark:bg-primary/5 border border-slate-200 dark:border-primary/20 p-6 md:p-10 rounded-xl shadow-xl lg:col-span-3">
+<div class="mb-8">
+<h1 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">Project Brief</h1>
+<p class="text-slate-600 dark:text-slate-400">Tell us about your vision. We'll help you turn it into reality.</p>
+</div>
+<form class="space-y-6"
+  action="https://formspree.io/f/xqewpagb"
+  method="POST">
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    
+    <div class="flex flex-col gap-2">
+      <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Name</label>
+      <input name="name" type="text" placeholder="Full Name" required
+        class="form-input w-full rounded-lg bg-slate-50 dark:bg-background-dark border-slate-200 dark:border-primary/30 text-slate-900 dark:text-white h-12 px-4"/>
+    </div>
+
+    <div class="flex flex-col gap-2">
+      <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Email Address</label>
+      <input name="email" type="email" placeholder="xyz@gmail.com" required
+        class="form-input w-full rounded-lg bg-slate-50 dark:bg-background-dark border-slate-200 dark:border-primary/30 text-slate-900 dark:text-white h-12 px-4"/>
+    </div>
+
+    <div class="flex flex-col gap-2">
+      <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Mobile Number</label>
+      <input name="phone" type="tel" placeholder="+91 9876543210"
+        class="form-input w-full rounded-lg bg-slate-50 dark:bg-background-dark border-slate-200 dark:border-primary/30 text-slate-900 dark:text-white h-12 px-4"/>
+    </div>
+
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    
+    <div class="flex flex-col gap-2">
+      <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Company Name</label>
+      <input name="company" type="text" placeholder="Your Business"
+        class="form-input w-full rounded-lg bg-slate-50 dark:bg-background-dark border-slate-200 dark:border-primary/30 text-slate-900 dark:text-white h-12 px-4"/>
+    </div>
+
+    <div class="flex flex-col gap-2">
+      <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Service Type</label>
+      <select name="service"
+        class="form-select w-full rounded-lg bg-slate-50 dark:bg-background-dark border-slate-200 dark:border-primary/30 text-slate-900 dark:text-white h-12 px-4">
+        <option value="">Select a service</option>
+        <option value="web-dev">Web Development</option>
+        <option value="seo">SEO & Marketing</option>
+        <option value="video">Video Editing</option>
+        <option value="branding">Branding & Design</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+  </div>
+
+  <div class="flex flex-col gap-2">
+    <label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Project Details</label>
+    <textarea name="message"
+      placeholder="Tell us about your project goals, timelines, and specific needs..."
+      class="form-textarea w-full rounded-lg bg-slate-50 dark:bg-background-dark border-slate-200 dark:border-primary/30 text-slate-900 dark:text-white min-h-[150px] p-4"></textarea>
+  </div>
+
+  <!-- Optional Subject -->
+  <input type="hidden" name="_subject" value="New Project Inquiry from Website">
+
+  <!-- Optional Redirect -->
+  <input type="hidden" name="_redirect" value="thankyou.html">
+
+  <button type="submit"
+    class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg transition-all flex items-center justify-center gap-2">
+    <span>Submit Project Brief</span>
+    <span class="material-symbols-outlined text-sm">send</span>
+  </button>
+
+</form>
+</div>
+<!-- Info Side -->
+<div class="space-y-12 lg:pt-10 lg:col-span-2">
+<div>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">Contact Information</h3>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">Email us at</p>
+<a class="text-lg font-bold hover:text-primary transition-colors" href="mailto:work.penandpixel@gmail.com">work.penandpixel@gmail.com
+</a>
+</div>
+</div><div class="flex items-start gap-4">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">Call us at</p>
+<a class="text-lg font-bold hover:text-primary transition-colors" href="tel:+91 85956 54883">+91 85956 54883</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Social Links -->
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Follow Our Work</h3>
+<div class="flex gap-4">
+<a class="size-10 rounded-full border border-slate-200 dark:border-primary/20 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">camera</span>
+</a>
+<a class="size-10 rounded-full border border-slate-200 dark:border-primary/20 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a class="size-10 rounded-full border border-slate-200 dark:border-primary/20 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">public</span>
+</a>
+</div>
+</div>
+<!-- What Happens Next Section -->
+<div class="bg-primary/5 rounded-xl border border-primary/20 p-8">
+<h3 class="text-xl font-bold text-primary mb-6">What Happens Next?</h3>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="size-6 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center flex-shrink-0">1</div>
+<p class="text-sm text-slate-600 dark:text-slate-400"><span class="font-bold text-slate-900 dark:text-white">Review:</span> Our team analyzes your requirements within 24 hours.</p>
+</div>
+<div class="flex gap-4">
+<div class="size-6 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center flex-shrink-0">2</div>
+<p class="text-sm text-slate-600 dark:text-slate-400"><span class="font-bold text-slate-900 dark:text-white">Discovery Call:</span> We'll schedule a 15-minute intro to discuss goals.</p>
+</div>
+<div class="flex gap-4">
+<div class="size-6 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center flex-shrink-0">3</div>
+<p class="text-sm text-slate-600 dark:text-slate-400"><span class="font-bold text-slate-900 dark:text-white">Proposal:</span> You'll receive a detailed scope, timeline, and quote.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Map Section Placeholder -->
+</main>
+<footer class="border-t border-slate-200 dark:border-primary/20 px-6 py-10 md:px-10 lg:px-20 text-center md:text-left">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-3">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="font-bold">Pen and Pixel</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">© 2024 Pen and Pixel Digital. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-xs text-slate-500 hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-xs text-slate-500 hover:text-primary" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
