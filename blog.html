@@ -112,6 +112,12 @@
 </div>
 </nav>
 <main class="pt-24">
+  <!-- BLOG SECTION -->
+<section class="max-w-7xl mx-auto px-6 mb-32">
+  <h2 class="text-4xl font-bold text-white mb-8">Latest Blogs</h2>
+  
+  <div id="blogs"></div>
+</section>
 <!-- Hero Section: Featured Article -->
 <section class="max-w-7xl mx-auto px-6 mb-24">
 <div class="relative rounded-3xl overflow-hidden group">
@@ -316,4 +322,30 @@
 </div>
 </div>
 </footer>
+<script>
+async function loadBlogs() {
+  const res = await fetch("/api/notion");
+  const data = await res.json();
+
+  const container = document.getElementById("blogs");
+
+  data.results.forEach(post => {
+    const title = post.properties.Title.title[0]?.plain_text || "No title";
+    const content = post.properties.Content.rich_text[0]?.plain_text || "";
+
+    const div = document.createElement("div");
+
+    div.className = "bg-surface-container-low p-6 rounded-xl mb-6";
+
+    div.innerHTML = `
+      <h2 class="text-xl font-bold text-white mb-2">${title}</h2>
+      <p class="text-slate-400">${content}</p>
+    `;
+
+    container.appendChild(div);
+  });
+}
+
+loadBlogs();
+</script>
 </body></html>
